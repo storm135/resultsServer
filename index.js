@@ -16,7 +16,7 @@ app.put('/vehicledata', (req, res) => {
   console.log('got request')
   data = req.body
   console.log(req.body)
-  fs.appendFile(`/vehicledata/${req.body.vin}.json`, JSON.stringify(req.body.results), err => {
+  fs.appendFile(`./vehicledata/${data.vin}.json`, JSON.stringify(data.results), err => {
     if (err) console.error(err)
   })
   res.send('posted')
@@ -26,7 +26,7 @@ app.put('/tooldata', (req, res) => {
   console.log('got request')
   data = req.body
   console.log(req.body)
-  fs.appendFile(`/tooldata/${req.body.vin}.json`, JSON.stringify(req.body.results), err => {
+  fs.appendFile(`./tooldata/${data.vin}.json`, JSON.stringify(data), err => {
     if (err) console.error(err)
   })
   res.send('posted')
