@@ -5,7 +5,7 @@ const fs = require('fs')
 const app = express()
 app.use(express.static('/'))
 app.use(bodyParser.json())
-const port = 8080
+const port = 36364
 
 app.get('/', (req, res) => {
   console.log('get /')
